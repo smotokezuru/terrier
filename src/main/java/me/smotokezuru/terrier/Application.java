@@ -1,14 +1,10 @@
 package me.smotokezuru.terrier;
 
-import me.smotokezuru.terrier.domain.Customer;
-import me.smotokezuru.terrier.domain.CustomerRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.List;
 
 @Configuration
 @ComponentScan
@@ -17,7 +13,7 @@ public class Application {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
-        CustomerRepository repository = context.getBean(CustomerRepository.class);
+/*        CustomerRepository repository = context.getBean(CustomerRepository.class);
 
         // save a couple of customers
         repository.save(new Customer("Jack", "Bauer"));
@@ -49,7 +45,7 @@ public class Application {
         for (Customer bauer : bauers) {
             System.out.println(bauer);
         }
-
+*/
 //        context.close();
     }
 }
